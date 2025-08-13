@@ -96,6 +96,36 @@ h1, h2, h3, h4 {
     position: relative;
 }
 
+/* Hero Top Title */
+.hero-top-title {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 10;
+    width: 100%;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-top-title h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+.hero-top-title p {
+    font-size: 1.4rem;
+    margin: 0;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    font-weight: 300;
+}
+
 /* Hero Roof Text */
 .hero-roof-text {
     position: absolute;
@@ -160,6 +190,46 @@ h1, h2, h3, h4 {
     background: #A0522D;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(139, 69, 19, 0.4);
+}
+
+/* Hero Bottom Content */
+.hero-bottom-content {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 10;
+    width: 100%;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-bottom-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+.hero-bottom-content .hero-subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    font-weight: 300;
+}
+
+.hero-bottom-content .hero-description {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Story Section */
@@ -456,6 +526,26 @@ h1, h2, h3, h4 {
     transform: translateY(-2px);
 }
 
+.facebook-link {
+    background: #1877F2 !important;
+    border-color: #1877F2 !important;
+}
+
+.facebook-link:hover {
+    background: #166FE5 !important;
+    transform: translateY(-2px);
+}
+
+.tripadvisor-link {
+    background: #00AA6C !important;
+    border-color: #00AA6C !important;
+}
+
+.tripadvisor-link:hover {
+    background: #009960 !important;
+    transform: translateY(-2px);
+}
+
 .contact-message {
     font-size: 1.2rem;
     max-width: 600px;
@@ -551,12 +641,32 @@ h1, h2, h3, h4 {
         left: 0;
     }
     
+    .hero-top-title h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-top-title p {
+        font-size: 1.1rem;
+    }
+    
     .hero-content h1 {
         font-size: 2.5rem;
     }
     
     .hero-subtitle {
         font-size: 1.2rem;
+    }
+    
+    .hero-bottom-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-bottom-content .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-bottom-content .hero-description {
+        font-size: 1rem;
     }
     
     .story-content,
@@ -584,8 +694,37 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 480px) {
+    .hero-top-title {
+        top: 100px;
+    }
+    
+    .hero-top-title h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-top-title p {
+        font-size: 1rem;
+    }
+    
     .hero-content h1 {
         font-size: 2rem;
+    }
+    
+    .hero-bottom-content {
+        bottom: 60px;
+    }
+    
+    .hero-bottom-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-bottom-content .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-bottom-content .hero-description {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
     }
     
     .menu-category {
