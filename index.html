@@ -14,6 +14,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
+                <i class="fas fa-croissant"></i>
                 <h2>Panaderia Paris</h2>
             </div>
             <ul class="nav-menu">
@@ -42,28 +43,88 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero" style="background-image: url('images/Hero Image  1.jpg');">
+        <div class="hero-decorative-elements">
+            <div class="floating-element element-1"><i class="fas fa-wheat-aw"></i></div>
+            <div class="floating-element element-2"><i class="fas fa-bread-slice"></i></div>
+            <div class="floating-element element-3"><i class="fas fa-coffee"></i></div>
+        </div>
         <div class="hero-bottom-content">
+            <div class="hero-badge">
+                <i class="fas fa-award"></i>
+                🇫🇷 <span data-translate="hero-badge">Authentic French</span>
+            </div>
             <h1 data-translate="hero-title">Panaderia Paris</h1>
             <p class="hero-subtitle" data-translate="hero-subtitle">Authentic French Bakery in the Heart of the Bolivian Jungle</p>
             <p class="hero-description" data-translate="hero-description">Experience the finest French baking tradition in Rurrenabaque, Bolivia</p>
-            <a href="#story" class="cta-button" data-translate="hero-cta">Discover Our Story</a>
+            <div class="cta-group">
+                <a href="#story" class="cta-button primary" data-translate="hero-cta">
+                    <i class="fas fa-book-open"></i>
+                    Discover Our Story
+                </a>
+                <a href="#menu" class="cta-button secondary" data-translate="hero-cta-menu">
+                    <i class="fas fa-utensils"></i>
+                    View Menu
+                </a>
+            </div>
         </div>
         <div class="hero-overlay"></div>
+        <div class="hero-scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
     </section>
 
     <!-- Story Section -->
     <section id="story" class="story-section">
+        <div class="section-decoration">
+            <div class="decoration-line"></div>
+            <i class="fas fa-star"></i>
+            <div class="decoration-line"></div>
+        </div>
         <div class="container">
             <div class="story-content">
                 <div class="story-text">
+                    <div class="experience-badge">
+                        <span class="badge-number">40+</span>
+                        <span class="badge-text" data-translate="experience-years">Years Experience</span>
+                    </div>
                     <h2 data-translate="story-title">Meet Master Baker Thierry</h2>
                     <p class="lead" data-translate="story-lead">From France to the Bolivian Jungle</p>
                     <p data-translate="story-p1">With over 40 years of baking expertise, Thierry brings the authentic taste of France to the heart of Bolivia. Every morning at 2 AM, when the jungle is still sleeping, Thierry begins his craft in our bakery.</p>
-                    <p><strong data-translate="story-quote">"I work at night so the people can enjoy their morning."</strong> <span data-translate="story-p2">This dedication drives Thierry's passion for creating the perfect croissant, pain au chocolat, and artisanal breads that have made Panaderia Paris a beloved destination in Rurrenabaque.</span></p>
+                    <div class="quote-highlight">
+                        <i class="fas fa-quote-left"></i>
+                        <p><strong data-translate="story-quote">"I work at night so the people can enjoy their morning."</strong></p>
+                    </div>
+                    <p data-translate="story-p2">This dedication drives Thierry's passion for creating the perfect croissant, pain au chocolat, and artisanal breads that have made Panaderia Paris a beloved destination in Rurrenabaque.</p>
                     <p data-translate="story-p3">His journey from the bakeries of France to the Amazon basin is one of passion, tradition, and an unwavering commitment to quality that you can taste in every bite.</p>
+                    
+                    <div class="story-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-clock"></i>
+                            <span class="stat-number">2 AM</span>
+                            <span class="stat-label" data-translate="stat-daily-start">Daily Start</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-bread-slice"></i>
+                            <span class="stat-number">100+</span>
+                            <span class="stat-label" data-translate="stat-daily-pastries">Daily Pastries</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-heart"></i>
+                            <span class="stat-number">∞</span>
+                            <span class="stat-label" data-translate="stat-passion">Passion</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="story-image">
-                    <img src="images/Thierry Baking.jpg" alt="Master Baker Thierry at work in the early morning hours" class="story-photo">
+                    <div class="image-frame">
+                        <img src="images/Thierry Baking.jpg" alt="Master Baker Thierry at work in the early morning hours" class="story-photo">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-play-circle"></i>
+                                <span data-translate="image-overlay-text">Watch Thierry at Work</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -72,68 +133,118 @@
     <!-- Menu Section -->
     <section id="menu" class="menu-section">
         <div class="container">
-            <h2 data-translate="menu-title">Our French Specialties</h2>
-            <p class="section-subtitle" data-translate="menu-subtitle">Freshly baked every morning with traditional French techniques</p>
+            <div class="section-header">
+                <h2 data-translate="menu-title">Our French Specialties</h2>
+                <p class="section-subtitle" data-translate="menu-subtitle">Freshly baked every morning with traditional French techniques</p>
+                <div class="specialty-badges">
+                    <span class="badge"><i class="fas fa-leaf"></i> <span data-translate="badge-fresh">Fresh Daily</span></span>
+                    <span class="badge"><i class="fas fa-certificate"></i> <span data-translate="badge-authentic">Authentic</span></span>
+                    <span class="badge"><i class="fas fa-heart"></i> <span data-translate="badge-handcrafted">Handcrafted</span></span>
+                </div>
+            </div>
             
             <div class="menu-grid">
-                <div class="menu-category">
-                    <h3><i class="fas fa-bread-slice"></i> <span data-translate="menu-breads">Breads & Pastries</span></h3>
+                <div class="menu-category featured">
+                    <div class="category-header">
+                        <h3><i class="fas fa-bread-slice"></i> <span data-translate="menu-breads">Breads & Pastries</span></h3>
+                        <span class="specialty-tag" data-translate="specialty-signature">Signature</span>
+                    </div>
                     <div class="menu-items">
-                        <div class="menu-item">
-                            <h4>Croissants</h4>
-                            <p>Buttery, flaky croissants made with traditional French technique</p>
+                        <div class="menu-item featured-item">
+                            <div class="item-icon"><i class="fas fa-croissant"></i></div>
+                            <div class="item-content">
+                                <h4 data-translate="croissants-title">Croissants</h4> <span class="popular-tag" data-translate="popular-tag">Most Popular</span>
+                                <p data-translate="croissants-desc">Buttery, flaky croissants made with traditional French technique</p>
+                                <div class="item-features">
+                                    <span class="feature"><i class="fas fa-clock"></i> <span data-translate="feature-fresh">Fresh at 6 AM</span></span>
+                                </div>
+                            </div>
                         </div>
                         <div class="menu-item">
-                            <h4>Pain au Chocolat</h4>
-                            <p>Classic French pastry with rich chocolate filling</p>
+                            <div class="item-icon"><i class="fas fa-candy-cane"></i></div>
+                            <div class="item-content">
+                                <h4 data-translate="pain-chocolat-title">Pain au Chocolat</h4>
+                                <p data-translate="pain-chocolat-desc">Classic French pastry with rich chocolate filling</p>
+                            </div>
                         </div>
                         <div class="menu-item">
-                            <h4>French Baguettes</h4>
-                            <p>Authentic crusty baguettes, perfect for any meal</p>
+                            <div class="item-icon"><i class="fas fa-bread-slice"></i></div>
+                            <div class="item-content">
+                                <h4 data-translate="baguettes-title">French Baguettes</h4>
+                                <p data-translate="baguettes-desc">Authentic crusty baguettes, perfect for any meal</p>
+                            </div>
                         </div>
                         <div class="menu-item">
-                            <h4>Pain de Campagne</h4>
-                            <p>Traditional country bread with a perfect crust</p>
+                            <div class="item-icon"><i class="fas fa-wheat-aw"></i></div>
+                            <div class="item-content">
+                                <h4 data-translate="pain-campagne-title">Pain de Campagne</h4>
+                                <p data-translate="pain-campagne-desc">Traditional country bread with a perfect crust</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="menu-category">
-                    <h3><i class="fas fa-cookie-bite"></i> <span data-translate="menu-sweets">Sweet Treats</span></h3>
+                    <div class="category-header">
+                        <h3><i class="fas fa-cookie-bite"></i> <span data-translate="menu-sweets">Sweet Treats</span></h3>
+                    </div>
                     <div class="menu-items">
                         <div class="menu-item">
-                            <h4>Tarte aux Fruits</h4>
-                            <p>Seasonal fruit tarts with fresh local ingredients</p>
+                            <div class="item-icon"><i class="fas fa-birthday-cake"></i></div>
+                            <div class="item-content">
+                                <h4 data-translate="tarte-fruits-title">Tarte aux Fruits</h4>
+                                <p data-translate="tarte-fruits-desc">Seasonal fruit tarts with fresh local ingredients</p>
+                            </div>
                         </div>
                         <div class="menu-item">
-                            <h4>Éclairs</h4>
-                            <p>Classic French choux pastry with cream filling</p>
+                            <div class="item-icon"><i class="fas fa-ice-cream"></i></div>
+                            <div class="item-content">
+                                <h4 data-translate="eclairs-title">Éclairs</h4>
+                                <p data-translate="eclairs-desc">Classic French choux pastry with cream filling</p>
+                            </div>
                         </div>
                         <div class="menu-item">
-                            <h4>Macarons</h4>
-                            <p>Delicate French macarons in various flavors</p>
+                            <div class="item-icon"><i class="fas fa-cookie"></i></div>
+                            <div class="item-content">
+                                <h4 data-translate="macarons-title">Macarons</h4>
+                                <p data-translate="macarons-desc">Delicate French macarons in various flavors</p>
+                            </div>
                         </div>
                         <div class="menu-item">
-                            <h4>Mille-feuille</h4>
-                            <p>Napoleon cake with layers of pastry and cream</p>
+                            <div class="item-icon"><i class="fas fa-layer-group"></i></div>
+                            <div class="item-content">
+                                <h4 data-translate="mille-feuille-title">Mille-feuille</h4>
+                                <p data-translate="mille-feuille-desc">Napoleon cake with layers of pastry and cream</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="menu-category">
-                    <h3><i class="fas fa-coffee"></i> <span data-translate="menu-beverages">Beverages</span></h3>
+                    <div class="category-header">
+                        <h3><i class="fas fa-coffee"></i> <span data-translate="menu-beverages">Beverages</span></h3>
+                    </div>
                     <div class="menu-items">
                         <div class="menu-item">
-                            <h4>French Press Coffee</h4>
-                            <p>Premium Bolivian coffee beans, expertly brewed</p>
+                            <div class="item-icon"><i class="fas fa-coffee"></i></div>
+                            <div class="item-content">
+                                <h4 data-translate="coffee-title">French Press Coffee</h4>
+                                <p data-translate="coffee-desc">Premium Bolivian coffee beans, expertly brewed</p>
+                            </div>
                         </div>
                         <div class="menu-item">
-                            <h4>Hot Chocolate</h4>
-                            <p>Rich hot chocolate made with local cacao</p>
+                            <div class="item-icon"><i class="fas fa-mug-hot"></i></div>
+                            <div class="item-content">
+                                <h4 data-translate="hot-chocolate-title">Hot Chocolate</h4>
+                                <p data-translate="hot-chocolate-desc">Rich hot chocolate made with local cacao</p>
+                            </div>
                         </div>
                         <div class="menu-item">
-                            <h4>Fresh Juices</h4>
-                            <p>Tropical fruit juices from the Amazon region</p>
+                            <div class="item-icon"><i class="fas fa-glass-citrus"></i></div>
+                            <div class="item-content">
+                                <h4 data-translate="juices-title">Fresh Juices</h4>
+                                <p data-translate="juices-desc">Tropical fruit juices from the Amazon region</p>
+                            </div>
                         </div>
                     </div>
                 </div>
