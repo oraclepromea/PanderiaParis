@@ -113,10 +113,12 @@ function typeWriter(element, text, speed = 100) {
 window.addEventListener('load', () => {
     const heroSubtitle = document.querySelector('.hero-subtitle');
     if (heroSubtitle) {
-        const originalText = heroSubtitle.textContent;
-        setTimeout(() => {
-            typeWriter(heroSubtitle, originalText, 80);
-        }, 1000);
+        const currentLang = document.documentElement.lang || 'en';
+        const correctText = translations[currentLang]['hero-subtitle'] || 'Authentic French Bakery in the Heart of the Bolivian Jungle';
+        
+        // Set text immediately without animation
+        heroSubtitle.innerHTML = '';
+        heroSubtitle.textContent = correctText;
     }
 });
 
@@ -261,7 +263,7 @@ const translations = {
         'location-description': 'Located in Rurrenabaque, Bolivia, our bakery sits at the gateway to the Bolivian Amazon. Whether you\'re exploring the jungle or simply passing through town, Panaderia Paris is your perfect stop for authentic French baking.',
         'location-address': 'Rurrenabaque, Beni Department, Bolivia',
         'location-hours': 'Mon-Sat: 6:00 AM - 12:30 PM | Closed Sundays',
-        'location-phone': 'Visit us in person',
+        'location-phone': '+591 74702110',
         
         // Contact Section
         'contact-title': 'Connect With Us',
@@ -352,7 +354,7 @@ const translations = {
         'location-description': 'Ubicada en Rurrenabaque, Bolivia, nuestra panadería se sitúa en la puerta de entrada al Amazonas boliviano. Ya sea que estés explorando la selva o simplemente pasando por el pueblo, Panaderia Paris es tu parada perfecta para la auténtica panadería francesa.',
         'location-address': 'Rurrenabaque, Departamento de Beni, Bolivia',
         'location-hours': 'Lun-Sáb: 6:00 AM - 12:30 PM | Cerrado Domingos',
-        'location-phone': 'Visítanos en persona',
+        'location-phone': '+591 74702110',
         
         // Contact Section
         'contact-title': 'Conéctate Con Nosotros',
@@ -377,6 +379,8 @@ function switchLanguage(lang) {
     elements.forEach(element => {
         const key = element.getAttribute('data-translate');
         if (translations[lang] && translations[lang][key]) {
+            // Clear any existing content and set the correct text immediately
+            element.innerHTML = '';
             element.textContent = translations[lang][key];
         }
     });
@@ -414,13 +418,13 @@ function initializeLanguage() {
     // Use saved language, browser language, or default to English
     const defaultLang = savedLang || browserLang;
     
-    // Apply the language
+    // Apply the language immediately without delay
     switchLanguage(defaultLang);
 }
 
 // Enhanced language toggle event listeners
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize language system
+    // Initialize language system immediately
     initializeLanguage();
     
     // Add click listeners to language buttons
@@ -452,21 +456,34 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Language change event listener for any additional functionality
+// Remove typing animation completely to prevent conflicts
+// Initialize hero subtitle with correct text immediately
+window.addEventListener('load', () => {
+    const heroSubtitle = document.querySelector('.hero-subtitle');
+    if (heroSubtitle) {
+        const currentLang = document.documentElement.lang || 'en';
+        const correctText = translations[currentLang]['hero-subtitle'] || 'Authentic French Bakery in the Heart of the Bolivian Jungle';
+        
+        // Set text immediately without animation
+        heroSubtitle.innerHTML = '';
+        heroSubtitle.textContent = correctText;
+    }
+});
+
+// Language change event listener - simplified without typing animation
 document.addEventListener('languageChanged', function(e) {
     const lang = e.detail.language;
     
     // Update any dynamic content that might need special handling
     updateDynamicContent(lang);
     
-    // Restart typing animation with new language content
+    // Update hero subtitle immediately without animation
     const heroSubtitle = document.querySelector('.hero-subtitle');
     if (heroSubtitle) {
         const newText = translations[lang]['hero-subtitle'];
         if (newText) {
-            setTimeout(() => {
-                typeWriter(heroSubtitle, newText, 80);
-            }, 500);
+            heroSubtitle.innerHTML = '';
+            heroSubtitle.textContent = newText;
         }
     }
 });
@@ -560,8 +577,6 @@ const imageObserver = new IntersectionObserver((entries, observer) => {
 
 // Initialize image optimization on DOM load
 document.addEventListener('DOMContentLoaded', function() {
-    // ...existing code...
-    
     // Initialize image optimizations
     optimizeImages();
     optimizeHeroImage();
